@@ -3,10 +3,11 @@
 set -e
 
 # Клонируем стабильную версию приложения
-git clone https://github.com/upsysops/raddit.git
+git clone https://github.com/upsysops/raddit.git /home/vagrant/raddit/
+
 
 # Устанавливаем зависимости
-cd raddit
+cd /home/vagrant/raddit
 bundle install
 
 # Запускаем сервис приложения и добавляем в автозагрузку
