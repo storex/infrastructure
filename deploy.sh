@@ -3,7 +3,8 @@
 set -e
 
 # Клонируем стабильную версию приложения
-git clone https://github.com/upsysops/raddit.git
+git clone https://github.com/upsysops/raddit.git /home/vagrant/raddit/
+cd /home/vagrant/raddit
 
 # Устанавливаем зависимости
 cd raddit
