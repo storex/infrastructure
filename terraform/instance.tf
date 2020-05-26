@@ -40,3 +40,9 @@ provider "google" {
 output "raddit_public_ip" { # Это способ, вывести любое значение. Здесь мы через точку обращаемся сначала к ресурсу google_compute_instance , потом конкретно к нашему raddit, к ему network_interface, и просим вывести nat_ip.
   value = google_compute_instance.raddit.network_interface.0.access_config.0.nat_ip
 }
+
+terraform {
+    backend "gcs" {
+        bucket = "my-project-bucket-1"
+    }
+}
